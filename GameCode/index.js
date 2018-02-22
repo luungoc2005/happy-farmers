@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Text,
 } from 'react-native'
+import {Link} from 'react-router-native'
 import ImageButton from '../components/ImageButton'
 import resolveAssetSource from 'resolveAssetSource'
 import _range from 'lodash/range'
@@ -48,7 +49,7 @@ export default class HomeScreen extends React.Component {
                 }}
               />
               <Text style={[styles.bannerText, {
-                fontSize: 36 * ratio,
+                fontSize: 24 * ratio,
               }]}>{this.gameCode}</Text>
             </View>
           </View>
@@ -69,16 +70,19 @@ export default class HomeScreen extends React.Component {
             />
           </View>
           <View style={styles.contentRow}>
-            <ImageButton
+            <Link 
+              to='/game-code/make'
+              component={ImageButton}
               ratio={ratio}
-              source={require('../assets/game-code/Make.png')}
-            />
+              source={require('../assets/game-code/Make.png')}>
+            </Link>
           </View>
         </View>
       </View>
     )
   }
 }
+
 const styles = StyleSheet.create({
   background: {
     resizeMode: 'stretch',

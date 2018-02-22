@@ -1,7 +1,7 @@
 import React from 'react'
 import { 
   View, 
-  Image, 
+  Image,
   Dimensions,
   StyleSheet,
 } from 'react-native'

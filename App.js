@@ -11,6 +11,7 @@ import {
 
 import HomeScreen from './HomeScreen'
 import GameCode from './GameCode'
+import MakeScreen from './GameCode/Make'
 
 export default class App extends React.Component {
   
@@ -20,8 +21,10 @@ export default class App extends React.Component {
         <View style={{ flex: 1 }}>
           <BackButton />
           <Switch>
-            <Route exact path="/" component={HomeScreen}/>
-            <Route exact path="/game-code" component={GameCode}/>
+            <Route exact path='/' component={HomeScreen}/>
+
+            <Route exact path='/game-code' component={GameCode}/>
+            <Route exact path='/game-code/make' component={MakeScreen}/>
           </Switch>
         </View>
       </NativeRouter>
